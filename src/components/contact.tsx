@@ -12,7 +12,7 @@ import {
 
 export default function ContactSection() {
   return (
-    <section className="py-20 relative bg-gradient-to-b from-blue-50 via-white to-blue-50 dark:from-black dark:via-neutral-950 dark:to-black">
+    <section className="py-20 relative bg-gradient-to-b from-blue-50 via-white to-blue-50 dark:from-black dark:via-neutral-950 dark:to-black" id='contact'>
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid md:grid-cols-2 gap-12">
         
         {/* Contact Info */}

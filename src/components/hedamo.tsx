@@ -1,6 +1,9 @@
+"use client";
+import Image from "next/image";
+
 export default function HedamoSection() {
   return (
-    <section className="bg-gray-50 py-16">
+    <section className="bg-gray-50 py-16" id="hedamo">
       <div className="max-w-6xl mx-auto px-6 space-y-12">
 
         {/* Section 1 */}
@@ -23,17 +26,27 @@ export default function HedamoSection() {
                 <span className="font-semibold">Global Market Access:</span> Facilitating international growth through strategic partnerships.
               </li>
             </ul>
-            <a 
-              href="https://altibbe.com/contact"
-              className="inline-block bg-green-700 text-white px-6 py-2 rounded-lg font-medium text-sm hover:bg-green-900 transition-colors"
-            >
-              JOIN WAITLIST
-            </a>
+          </div>
+          <div className="md:w-1/2 mt-6 md:mt-0 relative h-64 md:h-80">
+            <Image
+              src="/organic_farming.jpg"
+              alt="Transparency & Verification"
+              fill
+              className="object-cover rounded-lg"
+            />
           </div>
         </div>
 
         {/* Section 2 */}
         <div className="flex flex-col md:flex-row md:space-x-12 items-start">
+          <div className="md:w-1/2 relative h-64 md:h-80 mb-6 md:mb-0">
+            <Image
+              src="/examing-product.webp"
+              alt="Transparent Future"
+              fill
+              className="object-cover rounded-lg"
+            />
+          </div>
           <div className="md:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               A Transparent Future
@@ -47,12 +60,6 @@ export default function HedamoSection() {
             <p className="text-gray-600 text-sm mb-6">
               Using blockchain and AI, we track products from farm to consumer, enabling informed, health-positive decisions.
             </p>
-            <a 
-              href="https://altibbe.com/hedamo"
-              className="inline-block bg-green-700 text-white px-6 py-2 rounded-lg font-medium text-sm hover:bg-green-900 transition-colors"
-            >
-              FIND OUT MORE
-            </a>
           </div>
         </div>
 

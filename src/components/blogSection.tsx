@@ -35,7 +35,7 @@ export default function BlogSection() {
   ];
 
   return (
-    <section className="bg-gray-50 py-16">
+    <section className="bg-gray-50 py-16" id='blog'>
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-12 text-center">
           Blog Posts

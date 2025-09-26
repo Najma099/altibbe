@@ -1,11 +1,10 @@
 "use client";
-import { useState, useEffect, SetStateAction } from "react";
-import Image from 'next/image'
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const CarouselComponent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Carousel data with new images and text
   const slides = [
     {
       image: "/food.jpg",
@@ -18,7 +17,7 @@ const CarouselComponent = () => {
       subtitle: "We focus on quality ingredients for a healthier future"
     },
     {
-      image: "/nutritutionist.png",
+      image: "/nutritunist.jpg",
       title: "Expert Guidance",
       subtitle: "Our team of professionals helps your business thrive in wellness"
     },
@@ -28,7 +27,7 @@ const CarouselComponent = () => {
       subtitle: "Building a community of health-conscious individuals and brands"
     },
     {
-      image: "/business-handshake.png",
+      image: "/bussiness.jpg",
       title: "Grow With Altibbe",
       subtitle: "Partner with us and expand your wellness impact"
     }
@@ -41,7 +40,7 @@ const CarouselComponent = () => {
     return () => clearInterval(interval);
   }, [slides.length]);
 
-  const goToSlide = (index: SetStateAction<number>) => {
+  const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
 
@@ -54,35 +53,31 @@ const CarouselComponent = () => {
   };
 
   return (
-    <div className="relative w-full">
-      {/* Carousel wrapper */}
-      <div className="relative h-56 md:h-96 overflow-hidden rounded-lg bg-gray-200">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-              index === currentSlide ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <img
-              src={slide.image}
-              alt={slide.title}
-              className="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            />
-            {/* Text overlay */}
-            <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-              <div className="text-center text-white px-4">
-                <h2 className="text-2xl md:text-4xl font-bold mb-2 drop-shadow-lg">
-                  {slide.title}
-                </h2>
-                <p className="text-sm md:text-lg font-medium opacity-90 drop-shadow-md">
-                  {slide.subtitle}
-                </p>
-              </div>
-            </div>
+    <div className="relative w-full h-[30rem] md:h-[28rem]">
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+            index === currentSlide ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <Image
+            src={slide.image}
+            alt={slide.title}
+            fill
+            className="object-cover"
+            priority={index === 0} // First slide loads faster
+          />
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-white pointer-events-none">
+            <h2 className="text-2xl md:text-4xl font-bold drop-shadow-lg text-center px-4">
+              {slide.title}
+            </h2>
+            <p className="text-sm md:text-lg drop-shadow-md text-center px-4 mt-2">
+              {slide.subtitle}
+            </p>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
 
       {/* Slider indicators */}
       <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3">
@@ -91,7 +86,9 @@ const CarouselComponent = () => {
             key={index}
             type="button"
             className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-              index === currentSlide ? "bg-white" : "bg-white/50 hover:bg-white/75"
+              index === currentSlide
+                ? "bg-white"
+                : "bg-white/50 hover:bg-white/75"
             }`}
             aria-current={index === currentSlide}
             aria-label={`Slide ${index + 1}`}
@@ -121,7 +118,6 @@ const CarouselComponent = () => {
               d="M5 1 1 5l4 4"
             />
           </svg>
-          <span className="sr-only">Previous</span>
         </span>
       </button>
 
@@ -146,7 +142,6 @@ const CarouselComponent = () => {
               d="m1 9 4-4-4-4"
             />
           </svg>
-          <span className="sr-only">Next</span>
         </span>
       </button>
     </div>
