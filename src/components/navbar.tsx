@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-
+import Image from "next/image";
 export default function Navbar() {
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
@@ -13,9 +13,11 @@ export default function Navbar() {
     <nav className="w-full px-6 py-2 bg-black sticky top-0 border-b border-gray-900 backdrop-blur-xl z-50 text-white">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <img
+        <Image
           src="http://altibbe.com/wp-content/uploads/2024/09/Altibbe-final-logo-01.png"
           alt="Altibbe Logo"
+          width={128}
+          height={64}
           className="w-24 md:w-32 cursor-pointer"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         />

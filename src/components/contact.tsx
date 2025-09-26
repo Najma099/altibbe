@@ -23,8 +23,8 @@ export default function ContactSection() {
                 Contact Us
               </h2>
               <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">
-                Have questions or need support? We're here for you. Reach out and
-                let’s build a healthier future together.
+                Have questions or need support? We&apos;re here for you. Reach out and
+                let&apos;s build a healthier future together.
               </p>
             </header>
 
@@ -82,7 +82,7 @@ export default function ContactSection() {
               Join The Waitlist
             </h2>
             <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">
-              Join us in our mission for “Health for Humanity.” Whether you're
+              Join us in our mission for &quot;Health for Humanity.&quot; Whether you&apos;re
               looking for partnerships, health solutions, or advice, connect with
               us to make a difference.
             </p>

@@ -1,7 +1,7 @@
 "use client";
 
 import { Mail } from "lucide-react";
-
+import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-gray-50 dark:bg-black border-t border-gray-200 dark:border-neutral-800 py-24">
@@ -9,10 +9,12 @@ export default function Footer() {
         
         {/* Logo & Copyright */}
         <div className="flex flex-col items-start">
-          <img
+          <Image
             src="http://altibbe.com/wp-content/uploads/2024/09/Altibbe-final-logo-01.png"
             alt="Altibbe logo"
             className="w-40 mb-6"
+            width={160}
+            height={40}
           />
           <p className="text-sm text-gray-600 dark:text-gray-400">
             ©2024, Altibbe. All rights reserved.
@@ -25,8 +27,8 @@ export default function Footer() {
             Additional Menu
           </h3>
           <ul className="grid grid-cols-2 gap-3 text-sm text-gray-600 dark:text-gray-400">
-            <li><a href="/" className="hover:text-blue-600 transition">Home</a></li>
-            <li><a href="/new/hedamo" className="hover:text-blue-600 transition">Hedamo</a></li>
+            <li><a className="hover:text-blue-600 transition">Home</a></li>
+            <li><a className="hover:text-blue-600 transition">Hedamo</a></li>
             <li><a href="https://altibbe.com/terms-and-conditions/" className="hover:text-blue-600 transition">Terms & Conditions</a></li>
             <li><a href="https://altibbe.com/privacy-policy/" className="hover:text-blue-600 transition">Privacy Policy</a></li>
             <li><a href="https://altibbe.com/social-media-disclaimer/" className="hover:text-blue-600 transition">Social Media Disclaimer</a></li>

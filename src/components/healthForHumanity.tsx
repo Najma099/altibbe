@@ -1,14 +1,18 @@
+"use client";
+import Image from "next/image";
+
 export default function HealthForHumanitySection() {
   return (
     <section className="bg-gray-50 py-16">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center md:space-x-12">
 
         {/* Image */}
-        <div className="md:w-1/2 mb-8 md:mb-0">
-          <img
+        <div className="md:w-1/2 mb-8 md:mb-0 relative h-80 md:h-96">
+          <Image
             src="https://altibbe.com/wp-content/uploads/2024/12/Health-for-Humanity.png"
             alt="Health for Humanity"
-            className="w-full h-auto"
+            fill
+            className="object-contain"
           />
         </div>
 

@@ -1,28 +1,43 @@
+"use client";
+import Image from "next/image";
+
 export default function TransparencySection() {
   const items = [
     {
       title: "Agriculture",
       img: "https://altibbe.com/wp-content/uploads/2017/02/ico_1-77x77.png",
+      width: 77,
+      height: 77,
     },
     {
       title: "Fruits & Vegetables",
       img: "https://altibbe.com/wp-content/uploads/2017/02/ico_2-77x77.png",
+      width: 77,
+      height: 77,
     },
     {
       title: "Meat, Seafood & Dairy",
       img: "https://altibbe.com/wp-content/uploads/2017/02/ico_3-95x77.png",
+      width: 95,
+      height: 77,
     },
     {
       title: "Fashion",
       img: "https://altibbe.com/wp-content/uploads/2024/12/fashion-new.png",
+      width: 77,
+      height: 77,
     },
     {
       title: "Beauty",
       img: "https://altibbe.com/wp-content/uploads/2024/12/Beauty-2x-70x70.png",
+      width: 70,
+      height: 70,
     },
     {
       title: "Wellness",
       img: "https://altibbe.com/wp-content/uploads/2024/12/wellness-2x-77x77.png",
+      width: 77,
+      height: 77,
     },
   ];
 
@@ -43,10 +58,12 @@ export default function TransparencySection() {
               key={index}
               className="flex flex-col items-center p-4 hover:scale-105 transition-transform"
             >
-              <img
+              <Image
                 src={item.img}
                 alt={item.title}
-                className="w-16 h-16 object-contain mb-3"
+                width={item.width}
+                height={item.height}
+                className="object-contain mb-3"
               />
               <h3 className="text-base font-semibold text-gray-700 text-center">
                 {item.title}

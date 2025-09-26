@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function BlogSection() {
   const blogs = [
     {
@@ -46,9 +47,10 @@ export default function BlogSection() {
           {/* Large blog left */}
           <div className="md:col-span-4 md:row-span-2 relative bg-white rounded-lg shadow hover:shadow-lg transition-shadow overflow-hidden group">
             <a href={blogs[0].url} className="block h-full">
-              <img
+              <Image
                 src={blogs[0].image}
                 alt={blogs[0].title}
+                fill
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6">
@@ -66,9 +68,10 @@ export default function BlogSection() {
           {/* Top-right small blog */}
           <div className="md:col-span-2 md:row-span-1 relative bg-white rounded-lg shadow hover:shadow-lg transition-shadow overflow-hidden group">
             <a href={blogs[1].url} className="block h-full">
-              <img
+              <Image
                 src={blogs[1].image}
                 alt={blogs[1].title}
+                fill
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4">
@@ -86,9 +89,10 @@ export default function BlogSection() {
           {/* Bottom-right medium blog */}
           <div className="md:col-span-2 md:row-span-1 relative bg-white rounded-lg shadow hover:shadow-lg transition-shadow overflow-hidden group">
             <a href={blogs[2].url} className="block h-full">
-              <img
+              <Image
                 src={blogs[2].image}
                 alt={blogs[2].title}
+                fill
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4">
@@ -106,9 +110,10 @@ export default function BlogSection() {
           {/* Wide blog bottom spanning full width */}
           <div className="md:col-span-6 md:row-span-1 relative bg-white rounded-lg shadow hover:shadow-lg transition-shadow overflow-hidden group">
             <a href={blogs[3].url} className="block h-78">
-              <img
+              <Image
                 src={blogs[3].image}
                 alt={blogs[3].title}
+                fill
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6">
